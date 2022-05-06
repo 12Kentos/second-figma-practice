@@ -1,0 +1,201 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: Outfit, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0d192c;
+}
+
+.eth-card-container {
+  max-width: 35rem;
+  max-height: 60rem;
+  border-radius: 1.5rem;
+  background-color: #15263f;
+  padding: 2.4rem;
+}
+
+/**************************/
+/* Card Image */
+/**************************/
+
+.eth-img-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-bottom: 2.4rem;
+  background-color: #00fff8;
+  border-radius: 0.9rem;
+}
+
+.eth-eye-img {
+  position: absolute;
+  content: "";
+  width: 4.8rem;
+  height: 4.8rem;
+  background-image: url("./images/icon-view.svg");
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+
+.eth-cube-img {
+  width: 30.02rem;
+  height: 30.02rem;
+  border-radius: 0.8rem;
+}
+
+/**************************/
+/* Card Information */
+/**************************/
+
+.eth-description-container {
+  width: 30.02rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.4rem;
+}
+
+.eth-title {
+  font-size: 2.2rem;
+  color: #fff;
+  font-weight: 600;
+  line-height: 2.77rem;
+  padding-bottom: 1.6rem;
+}
+
+.eth-description {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 2.6rem;
+  color: #8bacd9;
+}
+
+/**************************/
+/* Card Data */
+/**************************/
+
+.eth-data-container {
+  width: 30.01rem;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2.4rem;
+  border-bottom: 1px solid #2e405a;
+}
+
+.eth-num {
+  color: #00fff8;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+.eth-num-icon {
+  width: 1.1rem;
+  height: 1.8rem;
+}
+
+.eth-time {
+  color: #8bacd9;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.eth-time-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.eth-num-container,
+.eth-time-container {
+  display: flex;
+  align-items: center;
+  gap: 0.64rem;
+}
+
+/**************************/
+/* Card Author */
+/**************************/
+
+.eth-auth-container {
+  margin-top: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.eth-auth-img {
+  width: 3.3rem;
+  height: 3.3rem;
+  margin-right: 1.6rem;
+}
+
+.eth-auth {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: #8bacd9;
+}
+
+.eth-auth-name {
+  color: #fff;
+}
+
+/**************************/
+/* active effects */
+/**************************/
+
+.eth-cube-img:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.eth-img-container:hover .eth-eye-img {
+  opacity: 1;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.eth-title:hover,
+.eth-auth-name:hover {
+  color: #00fff8;
+  cursor: pointer;
+}
+
+/**************************/
+/* Media Queries */
+/**************************/
+
+@media (max-width: 40rem) {
+  .eth-card-container {
+    width: 32.7rem;
+    height: 56.3rem;
+  }
+
+  .eth-cube-img,
+  .eth-img-container {
+    width: 27.8rem;
+    height: 27.8rem;
+  }
+
+  .eth-description-container,
+  .eth-data-container {
+    width: 27.8rem;
+  }
+}
